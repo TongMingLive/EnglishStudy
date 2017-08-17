@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:orientation="vertical"
+        android:background="@color/colorGreen"
+        android:layout_margin="5dp"
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Spinner
+                android:id="@+id/main_sp"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:background="@color/colorSpinner" />
+
+            <ImageView
+                android:id="@+id/main_btn_update"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/ic_autorenew_black_24dp"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/main_tv_word_name"
+            android:layout_marginTop="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="词库名称："
+            android:lines="1"
+            android:textSize="18sp"
+            android:textColor="@color/colorSpinner"/>
+
+        <TextView
+            android:id="@+id/main_tv_word_num"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="总词汇量："
+            android:lines="1"
+            android:textSize="18sp"
+            android:textColor="@color/colorSpinner"/>
+
+        <TextView
+            android:id="@+id/main_tv_word_time"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="创建时间："
+            android:lines="1"
+            android:textSize="18sp"
+            android:textColor="@color/colorSpinner"/>
+    </LinearLayout>
+
+    <GridView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/main_grid_view"
+        android:numColumns="2"/>
+</LinearLayout>

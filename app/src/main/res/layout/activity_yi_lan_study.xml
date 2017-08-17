@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:background="@color/colorGreen"
+        android:gravity="center">
+
+        <ImageButton
+            android:onClick="onBacked"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_arrow_back_black_24dp"
+            android:background="@null"
+            android:padding="10dp"/>
+
+        <TextView
+            android:id="@+id/yilan_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="英语学习title"
+            android:padding="10dp"
+            android:textSize="16sp"
+            android:textColor="#FFF" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/yilan_need_study"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#009688"
+            android:text="需要学习的单词"
+            android:textColor="#FFF"/>
+        <Button
+            android:id="@+id/yilan_master_study"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#FFFFFF"
+            android:text="已掌握的单词"
+            android:textColor="#000"/>
+    </LinearLayout>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/colorSpinner"
+        android:gravity="center">
+        <RadioGroup
+            android:id="@+id/yilan_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginRight="10dp"
+            android:checkedButton="@+id/yilan_radio_one">
+            <RadioButton
+                android:id="@+id/yilan_radio_one"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="正常\n显示"/>
+            <RadioButton
+                android:id="@+id/yilan_radio_two"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="解释\n缓出"/>
+            <RadioButton
+                android:id="@+id/yilan_radio_three"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="单词\n缓出"/>
+        </RadioGroup>
+        <Button
+            android:background="@drawable/blue_btn"
+            android:textColor="#FFF"
+            android:layout_margin="5dp"
+            android:id="@+id/yilan_nv"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="35dp"
+            android:text="女声"/>
+        <Button
+            android:background="@drawable/blue_btn"
+            android:textColor="#FFF"
+            android:layout_margin="5dp"
+            android:id="@+id/yilan_li"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="35dp"
+            android:text="例句显示"/>
+    </LinearLayout>
+    
+    <com.example.tong.englishstudy.view.MyListView
+        android:id="@+id/yilan_lv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorSpinner"/>
+</LinearLayout>
